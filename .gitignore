@@ -1,0 +1,16 @@
+**/node_modules
+*.sw[mnpcod]
+.tmp
+.env
+*.tmp
+*.zip
+*.tmp.*
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+dist/
+.env
+newrelic_agent.log
