@@ -14,3 +14,4 @@ $RECYCLE.BIN/
 dist/
 .env
 newrelic_agent.log
+apps
