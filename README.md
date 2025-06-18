@@ -42,16 +42,12 @@ The `.env` file contains environment variables required for the app to function.
 
 - `APP_URL`: The URL to download the zipped Node.js app.
 - `INFO_URL`: The URL to fetch the latest version information of the app.
-- `FILE_NAME`: The name of the downloaded zip file.
-- `FOLDER_NAME`: The name of the folder extracted from the zip file.
 
 ### Example `.env`
 
 ```env
 APP_URL="https://example.com/dev/simple-nodejs-app-master.zip"
 INFO_URL="https://example.com/dev/simple-nodejs-app-master-info.json"
-FILE_NAME="simple-nodejs-app-master.zip"
-FOLDER_NAME="simple-nodejs-app-master"
 ```
 
 ## Info Template
