@@ -7,11 +7,9 @@ const axios = require('axios');
 
 require('dotenv').config();
 
-
 const apiUrl = process.env.API_URL;
 const sensorCode = process.env.SENSOR_CODE;
 const shellId = process.env.SHELL_ID;
-
 
 (async () => {
   const result = await axios.post(`${apiUrl}/api/sensor/shell/config/${shellId}`, { code: sensorCode });
@@ -47,15 +45,16 @@ const shellId = process.env.SHELL_ID;
       if (currentVersion === latestVersion) {
         console.log('Already on the latest version');
         await setupEnvVariables();
+        await setupEnvVariables();
         await startApp();
         return;
       }
     } catch (error) {
-      console.log('Error reading package.json:', error);
+      console.log('Error reading package.json:');
     }
 
-    await setupEnvVariables();
     await setupApp();
+    await setupEnvVariables();
     await startApp();
   }
 
@@ -90,13 +89,13 @@ const shellId = process.env.SHELL_ID;
       console.log('Successfully downloaded and unzipped the file.');
       install();
     } catch (error) {
-      console.log('An error occurred during the setup process:', error);
+      console.log('An error occurred during the setup process:');
     }
   }
 
 
   async function setupEnvVariables() {
-    console.log('.Env setup...');
+    console.log('.Env setup...', envVariablePath, envVariables);
     fs.writeFileSync(envVariablePath, envVariables, { encoding: 'utf-8' });
   }
 

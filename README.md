@@ -46,8 +46,25 @@ The `.env` file contains environment variables required for the app to function.
 ### Example `.env`
 
 ```env
-APP_URL="https://example.com/dev/simple-nodejs-app-master.zip"
-INFO_URL="https://example.com/dev/simple-nodejs-app-master-info.json"
+API_URL=https://app.begrabby.com
+SHELL_ID=abc-123-def-456
+SENSOR_CODE=123 # password for the shell
+```
+
+## PM2 setting up
+- Install PM2:
+```
+npm install pm2@latest -g
+```
+- Run the app with the name
+```
+pm2 start app.js --name MY_APP_NAME
+```
+- Set the startup process: https://pm2.keymetrics.io/docs/usage/startup/
+```
+pm2 startup
+# Then copy/paste the displayed command onto the terminal
+pm2 save
 ```
 
 ## Info Template
